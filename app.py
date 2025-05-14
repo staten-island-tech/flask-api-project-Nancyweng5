@@ -6,16 +6,16 @@ app = Flask(__name__)
 # Route for the home page
 @app.route("/")
 def index():
-    # We ask the Pokémon API for the first 150 Pokémon.
-    response = requests.get("" \
-    "")
-    data = response.json()
-    pokemon_list = data['results']
+    try: 
+        response = requests.get("https://genshin.dev/characters")
+        characters = response.json()
+    except:
+        characters = []
+
+    return render_template("index.html", characters=characters)
     
-    # We create a list to store details for each Pokémon.
-    pokemons = []
     
-    for pokemon in pokemon_list:
+for pokemon in pokemon_list:
         # Each Pokémon has a URL like "https://pokeapi.co/api/v2/pokemon/1/"
         url = pokemon['url']
         parts = url.strip("/").split("/")
