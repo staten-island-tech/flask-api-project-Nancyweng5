@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Search Anime</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>Search Anime</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Search Anime</h1>
-    <a href="/">Back to Top Anime</a>
-    <form method="post">
-        <input type="text" name="query" placeholder="Search..." value="{{ query }}">
-        <input type="submit" value="Search">
+  <div class="container">
+    <h1>🔍Search Anime</h1>
+    <a class="nav-link" href="/">⬅ Back to Top Anime</a>
+    <form method="post" class="search-form">
+      <input type="text" name="query" placeholder="Type anime title..." value="{{ query }}" required>
+      <input type="submit" value="Search">
     </form>
     {% if anime_list %}
-        <ul>
-            {% for anime in anime_list %}
-                <li><a href="/anime/{{ anime.mal_id }}">{{ anime.title }}</a> - Score: {{ anime.score }}</li>
-            {% endfor %}
-        </ul>
+      <ul class="anime-list">
+        {% for anime in anime_list %}
+          <li>
+            <a href="/anime/{{ anime.mal_id }}"><strong>{{ anime.title }}</strong></a>
+            <span class="score">⭐ {{ anime.score }}</span>
+          </li>
+        {% endfor %}
+      </ul>
     {% elif query %}
-        <p>No results found for "{{ query }}".</p>
+      <p>No results found for "<strong>{{ query }}</strong>".</p>
     {% endif %}
+  </div>
 </body>
 </html>

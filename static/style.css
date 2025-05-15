@@ -1,58 +1,98 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
     padding: 20px;
-}
-
-h1 {
-    color: #2c3e50;
-}
-
-a {
-    color: #3498db;
+    background: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  a {
     text-decoration: none;
-}
-
-a:hover {
+    color: #007bff;
+  }
+  
+  a:hover {
     text-decoration: underline;
-}
-
-ul {
+  }
+  
+  .nav-link {
+    display: inline-block;
+    margin: 15px 0;
+    font-size: 16px;
+  }
+  
+  .anime-list {
     list-style-type: none;
     padding: 0;
-}
-
-li {
-    margin-bottom: 10px;
-    background: #fff;
+  }
+  
+  .anime-list li {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .anime-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .score {
+    background-color: #ffe082;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-form input[type="text"] {
+    flex-grow: 1;
     padding: 10px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-form input[type="text"] {
-    padding: 8px;
-    width: 250px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-form input[type="submit"] {
-    padding: 8px 12px;
-    background-color: #3498db;
-    color: white;
+    border-radius: 6px;
+  }
+  
+  .search-form input[type="submit"] {
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 6px;
     cursor: pointer;
-}
-
-form input[type="submit"]:hover {
-    background-color: #2980b9;
-}
-
-img {
-    margin-top: 10px;
+  }
+  
+  .search-form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .poster {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
+    margin: 20px 0;
+  }
+  
+  .anime-info p {
+    margin: 10px 0;
+    line-height: 1.6;
+  }
