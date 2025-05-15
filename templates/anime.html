@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ anime.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a href="/">Back to Home</a>
+    <h1>{{ anime.title }}</h1>
+    <img src="{{ anime.images.jpg.image_url }}" alt="{{ anime.title }}" width="200">
+    <p><strong>Score:</strong> {{ anime.score }}</p>
+    <p><strong>Episodes:</strong> {{ anime.episodes }}</p>
+    <p><strong>Status:</strong> {{ anime.status }}</p>
+    <p><strong>Synopsis:</strong> {{ anime.synopsis }}</p>
+</body>
+</html>

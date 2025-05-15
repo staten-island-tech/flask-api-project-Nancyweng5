@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Anime</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Search Anime</h1>
+    <a href="/">Back to Top Anime</a>
+    <form method="post">
+        <input type="text" name="query" placeholder="Search..." value="{{ query }}">
+        <input type="submit" value="Search">
+    </form>
+    {% if anime_list %}
+        <ul>
+            {% for anime in anime_list %}
+                <li><a href="/anime/{{ anime.mal_id }}">{{ anime.title }}</a> - Score: {{ anime.score }}</li>
+            {% endfor %}
+        </ul>
+    {% elif query %}
+        <p>No results found for "{{ query }}".</p>
+    {% endif %}
+</body>
+</html>
