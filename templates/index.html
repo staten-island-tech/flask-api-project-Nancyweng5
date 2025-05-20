@@ -2,7 +2,9 @@
 <html>
 <head>
   <title>🎬 Top Anime 🎬</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link 
+  rel="stylesheet" 
+  href="{{ url_for('static', filename='style.css') }}"/>
 </head>
 <body>
   <div class="container">
@@ -13,9 +15,9 @@
         <li>
           <a href="/anime/{{ anime.mal_id }}"><strong>{{ anime.title }}</strong></a>
           <span class="score"> ⭐ {{ anime.score }}</span>
-        </li>
+        </li> <!--Used for list items-->
       {% endfor %}
-    </ul>
+    </ul> <!--Unordererd List-->>
   </div>
 </body>
 </html>
