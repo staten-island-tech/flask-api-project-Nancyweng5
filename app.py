@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     try: 
-        response = requests.get("https://api.jikan.moe/v4/top/anime?limit=10")
+        response = requests.get("https://api.jikan.moe/v4/top/anime?limit=25")
         data = response.json()
         top_anime = data.get('data', [])
     except:
@@ -22,7 +22,7 @@ def search():
     if request.method == "POST":
         query = request.form.get("query")
         try:
-            response = requests.get(f"https://api.jikan.moe/v4/anime?q={query}&limit=10")
+            response = requests.get(f"https://api.jikan.moe/v4/anime?q={query}&limit=25")
             data = response.json()
             anime_list = data.get("data", [])
         except:

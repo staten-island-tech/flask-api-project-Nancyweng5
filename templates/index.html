@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>🎬 Top Anime 🎬</title>
+  <title> Anime </title>
   <link 
   rel="stylesheet" 
   href="{{ url_for('static', filename='style.css') }}"/>
 </head>
 <body>
   <div class="container">
-    <h1>🎬 Top Anime 🎬</h1>
+    <h1> Anime </h1>
     <a 
     class="nav-link" 
-    href="/search">🔍 Search Anime 🔍
+    href="/search">🔍 Search Anime 
     </a>
     <ul class="anime-list">
       {% for anime in anime_list %}
