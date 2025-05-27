@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title> Anime </title>
-  <link 
-  rel="stylesheet" 
-  href="{{ url_for('static', filename='style.css') }}"/>
+  <head>
+    <meta charset="UTF-8" />
+    <title> Anime </title>
+    <link 
+      rel="stylesheet" 
+      href="{{ url_for('static', filename='style.css') }}"
+      />
 </head>
 <body>
   <div class="container">
     <h1> Anime </h1>
+    <div class="card-container">
     <a 
     class="nav-link" 
-    href="/search">🔍 Search Anime 
+    href="/search"> Search Anime 
     </a>
     <ul class="anime-list">
       {% for anime in anime_list %}
         <li>
           <a href="/anime/{{ anime.mal_id }}"><strong>{{ anime.title }}</strong></a>
-          <span class="score"> ⭐ {{ anime.score }}</span>
-        </li> <!--Used for list items-->
-      {% endfor %}
-    </ul> <!--Unordererd List-->>
+            <span class="score"> {{ anime.score }}</span>
+          </li> 
+        {% endfor %}
+      </ul> 
+    </div>
   </div>
-</body>
+  </body>
 </html>
