@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>{{ anime.title }}</title>
-  <link 
-  rel="stylesheet" 
-  href="{{ url_for('static', filename='style.css') }}"
-  />
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ anime.title }}</title>
+    <link 
+      rel="stylesheet" 
+      href="{{ url_for('static', filename='style.css') }}"
+    />
 </head>
 <body>
   <div class="container">
-    <h1>{{ anime.title }}</h1>
-    <div class="anime-info">
-      <img src="{{ anime.images.jpg.image_url }}" alt="{{ anime.title }} poster" class="poster">
+    <h1>{{ anime.title }} Details</h1>
+    <div class="anime-details">
+      <img src="{{ anime.images.jpg.image_url }}" alt="{{ anime.title }} poster" >
       <p><strong>Score:</strong>  {{ anime.score }}</p>
       <p><strong>Episodes:</strong>  {{ anime.episodes }}</p>
       <p><strong>Status:</strong> {{ anime.status }}</p>

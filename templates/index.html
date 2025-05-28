@@ -7,23 +7,25 @@
       rel="stylesheet" 
       href="{{ url_for('static', filename='style.css') }}"
       />
-</head>
-<body>
-  <div class="container">
-    <h1> Anime </h1>
-    <div class="card-container">
+  </head>
+  <body>
+    <div class="container">
+      <h1> Anime </h1>
+      <div class="card-container">
     <a 
-    class="nav-link" 
+    class="card-link" 
     href="/search"> Search Anime 
     </a>
-    <ul class="anime-list">
+    <div class="anime-list">
       {% for anime in anime_list %}
         <li>
-          <a href="/anime/{{ anime.mal_id }}"><strong>{{ anime.title }}</strong></a>
+          <a 
+          href="/anime/{{ anime.mal_id }}"><strong>{{ anime.title }}</strong>
+            </a>
             <span class="score"> {{ anime.score }}</span>
           </li> 
         {% endfor %}
-      </ul> 
+        </div> 
     </div>
   </div>
   </body>
