@@ -35,11 +35,7 @@ body {
     font-size: 16px;
   }
   
-  .anime-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
+
   .anime-list li {
     padding: 12px;
     border-bottom: 1px solid #e0e0e0;
@@ -48,51 +44,7 @@ body {
     align-items: center;
   }
   
-  .anime-list li:last-child {
-    border-bottom: none;
-  }
+
+
   
-  .score {
-    background-color: #ffe082;
-    padding: 4px 8px;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  
-  .search-form {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .search-form input[type="text"] {
-    flex-grow: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-  
-  .search-form input[type="submit"] {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  .search-form input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  .poster {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 20px 0;
-  }
-  
-  .anime-info p {
-    margin: 10px 0;
-    line-height: 1.6;
-  }
+
