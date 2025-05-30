@@ -23,7 +23,7 @@ def search():
         try:
             response = requests.get(f"https://api.jikan.moe/v4/anime?q={query}&limit=25")
             data = response.json()
-            anime_list = data.get("data", [])
+            anime_list = data['data']
         except:
             anime_list = []
     return render_template("search.html", anime_list=anime_list, query=query)
@@ -32,7 +32,7 @@ def search():
 def anime_detail(anime_id):
     try:
         response = requests.get(f"https://api.jikan.moe/v4/anime/{anime_id}")
-        data = response.json().get("data", {})
+        data = response.json().get("data")
     except:
         data = {}
 

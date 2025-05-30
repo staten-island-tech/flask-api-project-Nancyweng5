@@ -16,9 +16,16 @@
     class="nav-link" 
     href="/">⬅ Back to Home Page</a>
     <form method="post" class="search-form">
-      <input type="text" name="query" placeholder="Type anime title..." value="{{ query }}" required>
-      <input type="submit" value="Search">
-    </form> <!-- Used to create a form that allows users to enter and submit data-->
+      <input 
+      type="text" 
+      name="query" 
+      placeholder="Type anime title..." 
+      value="{{ query }}" 
+      required>
+      <input 
+      type="submit" value=
+      "Search">
+    </form> 
     {% if anime_list %}
       <ul class="anime-list">
         {% for anime in anime_list %}

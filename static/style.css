@@ -25,17 +25,6 @@ body {
     color: #007bff;
   }
   
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  .nav-link {
-    display: inline-block;
-    margin: 15px 0;
-    font-size: 16px;
-  }
-  
-
   .anime-list li {
     padding: 12px;
     border-bottom: 1px solid #e0e0e0;
